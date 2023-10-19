@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header><h3>Lumi's Library</h3></header>
+      <div class="content-container">
+        <button class="open-button" onclick="openForm()" id="openButton">+ Add Book</button>
+        <div class="form-popup" id="myForm">
+          <form class="form-container" id="form">
+            <div>
+              <label for="book_name">Book:</label>
+              <input type="text" id="book_name" name="book_name" required />
+            </div>
+            <div>
+              <label for="book_author">Author:</label>
+              <input type="text" id="book_author" name="book_author" required />
+            </div>
+            <div>
+              <label for="book_pages">Pages:</label>
+              <input type="number" id="book_pages" name="book_pages" required />
+            </div>
+            <div>
+              <button class="btn" type="submit" onclick="closeForm()">Add Book</button>
+              <button class="btn close" onclick="closeForm()" id="closeButton">Cancel</button>
+            </div>
+          </div>
+        </form>
+        <div class="library-container" id="library-container">
+
+        </div>
+      </div>
+      <div id="overlay">
+
+      </div>
+      
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

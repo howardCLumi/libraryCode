@@ -1,0 +1,130 @@
+.container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgb(231, 231, 231);
+    z-index: 2;
+}
+header{
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid black;
+    z-index: 3;
+    background-color: white;
+}
+.content-container{
+    display: grid;
+    box-sizing: border-box;
+    background-color: rgb(231, 231, 231);
+    z-index: 1;
+}
+#openButton{
+    background-color: inherit;
+    color: black;
+    border: none;
+    border-radius: 10px;
+}
+.open-button{
+    margin: 10px;
+    font-size: 36px;
+}
+.open-button:hover{
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+    border-radius: 10px;
+}
+.form-popup {
+    display: none;
+    background-color: #555;
+    color: black;
+    padding: 16px 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    z-index: 10;
+    width: 500px;
+    max-width: 800px;
+}
+.form-popup.active{
+    transform: translate(-50%, -50%);
+}
+#overlay{
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+}
+
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+.form-container {
+    padding-right: 10px;
+}
+.form-container input[type=text], .form-container input[type=number] {
+    width: 100%;
+    margin: 5px 0 22px 0;
+}
+.form-container .btn {
+    background-color: #04AA6D;
+    color: black;
+    padding: 16px 20px;
+    border: none;
+    width: 100%;
+    margin-bottom: 10px;
+    opacity: 0.8;
+    border-radius: 10px;
+}
+.form-container .close {
+    background-color: red;
+}
+input{
+    border: 2px solid black;
+    margin-bottom: 15 px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+input:invalid {
+    border-color: red;
+}
+input:valid {
+    border-color: green;
+}
+.library-container {
+    overflow: auto;
+    display: grid;
+    gap: 4px;
+    padding: 4px;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+.card{
+    display: grid;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+
+    max-width: 500px;
+    padding: 20px;
+    margin: 20px;
+    background-color: white;
+}
+.titleContent{
+    justify-self: center;
+    margin: 5px;
+}
+#removeButton{
+    border-radius: 10px;
+    background-color: rgb(255, 135, 135);
+    border: none;
+    margin-top: 5px;
+}
